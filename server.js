@@ -81,11 +81,11 @@ if(request.url == "/todos"  && request.method =="GET"){
             const id = request.url.split('/').pop();
             const index = todos.findIndex(element => element.id ==id);
             if(todo !== undefined && index !== -1){
-                todo[index].title = todo;
+                todos[index].title = todo;
                 response.writeHead(200, headers);
                 response.write(JSON.stringify({
                     "status": "success",
-                    "data":todo,
+                    "data":todos,
                 }));
                 response.end();
             }else{
