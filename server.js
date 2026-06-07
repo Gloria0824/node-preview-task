@@ -19,7 +19,7 @@ request.on('data', chunk => {
 
 
 if(request.url == "/todos"  && request.method =="GET"){
-    response.writeHead(200);
+    response.writeHead(200,headers);
     response.write(JSON.stringify({
         "status": "success",
         "data":todos,
@@ -35,7 +35,7 @@ if(request.url == "/todos"  && request.method =="GET"){
                 "id" : uuidv4(),
                 };
                 todos.push(todo);
-                response.writeHead(200);
+                response.writeHead(200, headers);
                 response.write(JSON.stringify({
                     "status": "success",
                     "data":todos,
@@ -52,7 +52,7 @@ if(request.url == "/todos"  && request.method =="GET"){
 )
 }else if(request.url == "/todos"  && request.method == "DELETE"){
     todos.length = 0;
-    response.writeHead(200);
+    response.writeHead(200,headers);
     response.write(JSON.stringify({
         "status": "success",
         "data":todos,
@@ -64,7 +64,7 @@ if(request.url == "/todos"  && request.method =="GET"){
     const index = todos.findIndex(element => element.id == id);
     if(index !== -1){
         todos.splice(index,1);
-        response.writeHead(200);
+        response.writeHead(200, headers);
         response.write(JSON.stringify({
         "status": "success",
         "data":todos,
@@ -98,7 +98,7 @@ if(request.url == "/todos"  && request.method =="GET"){
     })
 
 }else if(request.method == "OPTIONS"){
-    response.writeHead(200);
+    response.writeHead(200, headers);
     response.end();
 }else{
     response.writeHead(404);
