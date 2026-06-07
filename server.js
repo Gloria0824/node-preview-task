@@ -101,7 +101,7 @@ if(request.url == "/todos"  && request.method =="GET"){
     response.writeHead(200, headers);
     response.end();
 }else{
-    response.writeHead(404);
+    response.writeHead(404, header);
     response.write(JSON.stringify({
         "status": "false",
         "message":"無此網站路由",
