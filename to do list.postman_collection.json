@@ -1,0 +1,120 @@
+{
+  "info": {
+    "_postman_id": "8d4efe08-0004-4e19-bbea-54618ad86814",
+    "name": "to do list",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "55529344",
+    "_collection_link": "https://go.postman.co/collection/55529344-8d4efe08-0004-4e19-bbea-54618ad86814?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "取得髓有代辦",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://node-preview-task.onrender.com/todos",
+          "protocol": "https",
+          "host": [
+            "node-preview-task",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "todos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "新增",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\":\"吃飯\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://node-preview-task.onrender.com/todos",
+          "protocol": "https",
+          "host": [
+            "node-preview-task",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "todos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "刪除所有",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "https://node-preview-task.onrender.com/todos",
+          "protocol": "https",
+          "host": [
+            "node-preview-task",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "todos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "修改",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "https://node-preview-task.onrender.com/todos",
+          "protocol": "https",
+          "host": [
+            "node-preview-task",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "todos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "刪除單筆",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "https://node-preview-task.onrender.com/todos",
+          "protocol": "https",
+          "host": [
+            "node-preview-task",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "todos"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
